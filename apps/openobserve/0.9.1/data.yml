@@ -1,0 +1,26 @@
+additionalProperties:
+  formFields:
+    - default: 5080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""  
+      envKey: ZO_ROOT_USER_EMAI  
+      labelEn: Root User Email  
+      labelZh: 根用户邮箱  
+      random: false  #是否在 default 文字后面，增加随机字符串
+      required: true  
+      rule: paramCommon  #校验规则
+      type: text  #需要手动填写的，使用此 type
+    - default: "" 
+      envKey: ZO_ROOT_USER_PASSWORD  
+      labelEn: Root User Password 
+      labelZh: 根用户密码  
+      random: false  
+      required: true  
+      rule: paramComplexity  
+      type: password  
